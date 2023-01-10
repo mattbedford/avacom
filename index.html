@@ -5,6 +5,7 @@
     <title>Avacom</title>
     <link rel='stylesheet' id='normalize'  href='css/normalize.css' media='all' />
     <link rel='stylesheet' id='skeleton'  href='css/skeleton.css' media='all' />
+    <link rel='stylesheet' id='custom'  href='css/custom.css' media='all' />
     <link rel="icon" type="image/png" href="images/favicon.png">
 
     <script src="https://avacom.it/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp" id="jquery-core-js"></script>
@@ -14,136 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-    /*GLOBALS*/
-    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Source+Sans+3:wght@400;600&display=swap');
-    body, html {
-        max-width:100%;
-        overflow-x:hidden;
-    }
-    :root {
-    --dark: #3e3876;
-    --light: #60bce6;
-    --ultralight: #e4f5ff;
-    }
-    #navbar, section, .container {
-        width:100%;
-        max-width:unset !important;
-    }
-    .body-section {
-        max-width:1200px;
-        margin:0 auto;
-        padding:60px 0;
-    }
-    .body-section .container > .row {
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
-    }
-    .section-photo-wrap {
-        display:inline-block;
-        position:relative;
-    }
 
-        .section-photo-wrap::after {
-        display:block;
-        position:absolute;
-        top:10px;
-        left:12px;
-        content:'';
-        width:100%;
-        height:100%;
-        border:1px solid var(--light);
-        z-index:0;
-    }
-        .section-photo-wrap img {
-        position:relative;
-        max-width:480px;
-        z-index:1;
-    }
-
-    /*NAV*/
-    #navbar {
-        max-width:100%;
-        padding: 0 100px;
-        box-sizing:border-box;
-    }
-    #navbar .container {
-        display:flex;
-        flex-direction:row;
-        align-items:center;
-        justify-content:space-between;
-        padding:20px;
-        height:120px;
-    }
-    .site-logo {
-        flex:0 1 10%;
-    }
-    .site-logo img {
-        width:200px;
-    }
-    .site-nav {
-        flex:0 1 90%;
-        display:flex;
-        justify-content:flex-end;
-    }
-    .site-nav ul {
-        display:flex;
-        list-style:none;
-        padding-top:30px;
-        align-items:center;
-    }
-    .site-nav ul a {
-        font-family: 'Source Sans 3', sans-serif;
-        font-weight:700;
-        font-size:1.7rem;
-        color:var(--dark);
-        text-decoration:none;
-        margin-left:40px;
-    }
-    .button-primary svg {
-        width:20px;
-        fill:white;
-        margin:0 5px -5px -10px;
-    }
-    /*HOME*/
-    .hero {
-        min-height:80vh;
-        background:url('images/avacom-hero-image.jpg');
-        background-size:cover;
-        width:100%;
-        padding:0 100px;
-    }
-    h1, h2, h3, h4, h5, h6 {
-        font-family: 'Source Sans 3', sans-serif;
-    }
-    p, a, ul, ol, li, span {
-        font-family: 'Lato', sans-serif;
-        font-weight:300;
-    }
-    .hero h1 {
-        font-weight:600;
-        font-size:4rem;
-        color:white;
-    }
-    .hero h4 {
-        font-weight:400;
-        font-size:3rem;
-        color:white;
-    }
-    .center-text {
-        padding:20px 0;
-    }
-    .banner {
-        background:rgba(62,56,118,0.9);
-        padding:40px;
-        margin:100px 0;
-        max-width:600px;
-    }
-    
-
-    </style>
 </head>
 <body>
     <div id="navbar">
@@ -163,7 +35,7 @@
             </div>
         </div>
     </div>
-    <div class="section hero">
+    <div class="section hero" style="background:url('images/avacom-hero-image.jpg');background-size:cover;background-repeat:no-repeat;background-position: center;">
         <div class="container">
             <div class="row">
             <div class="one-half column center-text banner">
@@ -198,6 +70,45 @@
         </div>
     </div>  
 
+    <div class="section body-section">
+        <div class="container">
+            <div class="row counters">
+                <div class="one-quarter column center-text">
+                    <h1 class="myValue" id="value">7</h1>
+                    <span>Camioni</span>
+                </div>
+                <div class="one-quarter column center-text">
+                    <h1 class="myValue" id="value2">160</h1>
+                    <span>millioni litri di latte all’anno</span>
+                </div>
+                <div class="one-quarter column center-text">
+                    <h1 class="myValue" id="value3">11</h1>
+                    <span>Dipendenti</span>
+                </div>
+                <div class="one-quarter column center-text">
+                    <h1 class="myValue" id="value4">70</h1>
+                    <span>Anni di esperienza</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section grey">
+        <div class="container">
+                <h1>Alcuni nostri clienti</h1>
+            <div class="row">
+                <div class="one-third column center-text">
+                    <img src="images/galbani.png">
+                </div>
+                <div class="one-third column center-text">
+                    <img src="images/castelli.png">
+                </div>
+                <div class="one-third column center-text">
+                    <img src="images/gelmini.png">
+                </div>
+            </div>
+        </div>
+    </div> 
 
     <div class="section body-section">
         <div class="container">
@@ -221,5 +132,9 @@
         </div>
     </div>  
 
+    
 
+
+
+    <script src="js/scripts.js" id="custom-scripts"></script>
 </body>
