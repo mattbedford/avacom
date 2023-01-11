@@ -162,7 +162,7 @@ p, a, ul, ol, li, span {
     padding:60px 0 20px 0;
     text-align:center;
 }
-.section.grey .container {
+.section.grey .row {
     max-width:1200px;
     margin:0 auto;
     padding:0 40px;
@@ -173,4 +173,36 @@ p, a, ul, ol, li, span {
 }
 .section.grey h1 {
     margin-bottom:-20px;
+}
+
+.row:has(.bullet-section) {
+    background:#eee;
+    padding:40px;
+  }
+  .column:has(.four-photos):nth-child(2)
+   span {
+    float:right;
+  }
+  .four-photos {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    max-width:80%;
+  }
+  
+  .four-photos img {
+    max-width:100%;
+  }
+  @supports (object-fit:cover) {
+   .four-photos img {
+    height: 100%;
+    object-fit: cover;
+   }
+  }
+  
+  .bullets ul li {
+    list-style-image: url('../images/checkbox.svg') !important;
+    list-style-position: inside;
 }
